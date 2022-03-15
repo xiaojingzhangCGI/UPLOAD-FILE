@@ -1,0 +1,15 @@
+<template>
+        
+        <lightning-file-upload
+            name="ContactPicture"
+            label="Upload Contact Picture"
+            file-field-name="css_ContentDocumentIdfileupload__c"
+            file-field-value={fileId}
+            record-id={contactId}
+            accept={acceptedFormats}
+            onuploadfinished={handleUploadFinished}
+        ></lightning-file-upload>
+
+        <c-css-show-image record-id={recordId} file-name={fileNameLabel} onfileidretrieved={handleFileIdRetrieved}></c-css-show-image>
+
+</template>
